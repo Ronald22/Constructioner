@@ -1,9 +1,16 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+/src
 /tmp
 /out-tsc
+/e2e
+.editorconfig
+angular.json
+package.json
+package-lock.json
+tsconfig.json
+tslint.json
 
 # dependencies
 /node_modules
