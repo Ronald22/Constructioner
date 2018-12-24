@@ -1,0 +1,150 @@
+// Importación del módulo scss de bootstrap-grid
+@import "../../../assets/sass/bootstrap-grid";
+
+//Estilos de la barra de navegación principal
+.menu{
+
+   // estilos del logo del sitio web
+   &__logo{
+      height: 40px;
+      img{
+         height: 100%;
+         width: auto;
+      }
+   }
+
+   // estilos del boton responsivo
+	// TODO: animar los botones para que el cambio no se note;
+   &__button{
+      background-color: transparent;        
+      border-radius: 1px;
+      &--open, &--close{
+         background-color: transparent;
+         border: none;           
+      }
+		&--open{
+			height: 2.1em; 
+         width: 2.3em;
+         font-size: 1rem;  
+         transition: all ease .3s;
+		}
+		&--close{
+			position: fixed;
+         z-index: 500;
+         right: 212px;
+         top: 20px;
+         color: rgba($white,.5);
+         font-size: .65rem;
+		}
+		&--open:hover{
+         background-color: #FFCC33;
+         border-radius:1px; 
+         color: #fff;  
+      }
+      &--close:hover{
+         color: #fff;
+      }
+   }
+
+   // estilos de la barra de navegacion y enlaces de accceso
+   &__links{
+      &--nav{
+			ul{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				a{
+					text-transform: uppercase;
+				}
+			}
+		}
+   }
+   @include media-breakpoint-down(sm){
+		// tarea: arreglar el problema de que no muestra todo el menu en alturas pequeñas;
+		&__links{
+			background-color: rgba($black,.95);
+			height: 100vh;
+			width: 260px;
+			padding: 0;
+			position: fixed;
+			top: 0;
+			right: -400px;
+			transition: right 1s;
+			&--nav{
+				li{
+               margin: 0 30px;
+               padding-top: 20px;
+               &:nth-child(1){
+                  padding-top: 60px ;
+               } 
+               &:nth-child(1), &:last-child{
+                  padding-bottom: 15px;
+                  border-bottom: 1px solid $yellow;
+               } 
+               a:hover{
+               	color: $white;
+               }                 
+            }				
+			}
+			&--access{
+				background-color: transparent;
+				top: 346px;
+				div{
+					display: flex;
+					margin: 0 30px;
+		            padding-top: 30px;
+		            justify-content: space-between;
+			        a{
+			            display: inline-block;
+			            width: 95px;
+			        }
+			        a:first-child{
+			            margin-right: 5px;   
+			        }
+         		}
+			}
+		}
+		.show{
+			right: 0;
+      }
+   } 
+   // tamaño mayor a 768px
+	@include media-breakpoint-up(md){
+		height: 71px;
+		padding-bottom: 10px;
+		&__logo{
+         height: 50px;
+         padding-bottom: 3.5px;
+		}
+		&__links{
+			&--nav{
+				li{
+					padding: 0 5px;
+				}
+			}
+			&--access{
+				div{
+					a{
+						background-color: transparent;
+					}
+					span{
+						height: 9px;
+						margin: 0.5px 8px;
+						border-right: 1px solid $gray-800;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+	// tamaño mayor a 992px
+	@include media-breakpoint-up(lg){
+		&__links{
+			&--nav{
+				li{
+					padding: 0 9px;
+				}
+			}
+		}
+	}  
+}

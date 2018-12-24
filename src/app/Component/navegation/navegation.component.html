@@ -1,0 +1,50 @@
+<nav class="menu container">
+   <div class="row align-items-center align-items-md-end justify-content-between">		
+      
+      <!-- logo del sitio web -->
+      <div class="menu__logo col-auto ">
+         <a href="index.html">
+            <img src="../../../assets/img/logo1.png" alt="Construtioner">
+         </a>
+      </div>
+
+      <!-- boton para activar el menu responsivo para dispositivos moviles (visible hasta tamaño s) -->
+      <div class="menu__button col-auto d-md-none" (click)="showMenu()">
+         <!-- si el valor de la variable mostrar es verdadero se muestra el boton abrir -->
+         <button class="menu__button--open" type="button" *ngIf="show ; else showIcon">
+            <fa-icon [icon]="['fas', 'bars']" size="lg"></fa-icon>
+         </button>
+
+         <!-- caso contrario se muestra el boton cerrar -->
+         <ng-template #showIcon>
+            <button class="menu__button--close" [ngClass]="{ 'animate-button': show === false }" type="button">
+               <fa-icon [icon]="['fas', 'times']" size="lg"></fa-icon>
+            </button>
+         </ng-template>      
+      </div>
+      
+      <!-- barra de navegacion del sitio web -->
+      <div class="menu__links menu__links--nav col-auto" [ngClass]="{ 'show': show === false }">
+         <!-- navegación  -->
+            <ul class="f-menu d-md-flex">
+               <li><a href="">Home</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="">Services</a></li>
+               <li><a href="">Build it yourself</a></li>
+               <li><a href="">Portfolio</a></li>
+               <li><a href="">Blog</a></li>
+               <li><a href="">Contact</a></li>
+            </ul>
+      </div>
+
+      <!-- enlaces de acceso de usuarios -->
+      <div class="menu__links menu__links--access col-auto" [ngClass]="{ 'show': show === false }">
+         <!-- acceso  -->
+         <div class="f-menu-access">
+               <a href="" class="btn-menu btn-primary">Login</a>
+               <span></span>
+               <a href="" class="btn-menu btn-light">Register</a>
+         </div> 
+      </div>
+   </div>
+</nav>

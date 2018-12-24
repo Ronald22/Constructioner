@@ -1,0 +1,29 @@
+// estilos que se repiten varias veces en el proyecto
+.subtitle{
+	position: relative;
+	margin: 30px auto 20px;
+	padding-left: 10px;
+	width: 140px;
+	height: 36px;
+	border-left: 5px solid $yellow;
+	text-transform: uppercase;
+	span{
+		@extend .f-subtitle;
+		font-size: .75rem;
+		line-height: 100%;
+		display: block;
+	}
+	h2{
+		line-height: 100%;
+	}
+	&::before{
+		content:"";
+		height: 36px;
+		border-left: 2px solid $yellow;
+		position: absolute;
+		left: -10px;
+	}
+	@include media-breakpoint-up(md){
+		margin: 60px auto 30px 20px;
+	}
+}

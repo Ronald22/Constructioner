@@ -1,0 +1,59 @@
+// estilos de tipografía
+
+.f-title-primary{
+   font-family: $font-primary;
+   font-size: 2.375rem;
+   font-weight: 700;
+   color: $gray-800;
+   span{
+      font-size: 1.25rem;
+   }
+   @include media-breakpoint-up(md){
+      font-size: 2.875rem;
+      span{
+        font-size: .875rem;
+      }
+   }
+}
+.f-subtitle{
+   font-family: $font-primary;
+   font-size: 1.75rem;
+   font-weight: 700;
+   color: $gray-800; 
+   @include media-breakpoint-up(md){
+     
+   }
+}
+.f-parrafo{
+   font-family: $font-primary;
+   font-size: .75rem;
+   font-weight: 600;
+   color: $gray-300;
+   a{
+      color: $gray-300;
+   }
+   @include media-breakpoint-up(md){
+      font-size: .75rem;
+   }
+}
+.f-menu{
+   font-family: $font-primary;
+   font-size: .875rem;
+   font-weight: 700;
+   a{
+      color: rgba($white,.8)
+   }
+   @include media-breakpoint-up(md){
+      font-size: .75rem;
+      a{
+         color: $gray-800;
+      }
+   }
+}
+.f-menu-access{
+   @extend .f-menu;
+   font-weight: 600;
+   a{
+      color: $gray-800;
+   }
+}
