@@ -1,0 +1,114 @@
+// Importación del módulo scss de bootstrap-grid
+@import "../../../assets/sass/bootstrap-grid.scss";
+// estilos generales del banner
+.banner{
+   height: 100%;
+   position: relative;
+   
+   // diseño de la imagen principal del banner
+	&__img{
+	   height: 100%;
+		overflow: hidden;
+		img{
+         position: relative;
+		   left: 20%;
+			height: 100%;
+			z-index: 50;
+         transform: translate(-30%, 0%);
+		}
+	}
+	// contenido del banner
+	&__content{
+		position: absolute;
+		z-index: 60;
+		text-align: center;
+		top: 0; bottom: 0; left: 0; right: 0;
+      margin: auto;
+      width: 240px;
+      height: 248px;	
+      text-transform: uppercase;	
+      h1{
+         padding-top: 20px;
+         padding-bottom: 20px;
+         line-height: 30px;
+         span{
+            line-height: 34px;
+         }
+
+         &::after{
+            content: "";
+            display: block;
+            margin: 35px auto 10px;
+            width: 70px;
+            border-bottom: 1px solid $gray-800;
+         }
+      }
+      a{
+         height: 40px;
+         width: 126px;
+      }
+
+	}
+	// // estilos para pantallas superior a 768px
+	// @include media-breakpoint-up(md){
+	// 	&__img{
+	// 		img{
+	// 			left: 50%;
+	// 		   transform: translate(-50%, 0%);
+	// 		   height: 748px;
+	// 		}
+	// 	}
+	// 	&__content{
+	// 		text-align: left;
+	// 		div{
+	// 			top: 0; bottom: 0; left: 50%; right: 50%;
+	// 			h1{
+	// 				line-height: 28px;
+	// 				span{
+	// 					margin-left: 3px;
+	// 					line-height: 42px;
+	// 				}
+	// 				&::after{
+	// 					margin-left: 2px;
+	// 				}
+	// 			}
+	// 			a{
+	// 				margin-left: 1px;
+	// 			}
+	// 		}
+	// 	}
+	// 	&__slider{
+	// 		width: 100%;
+	// 		border-top: 2px solid $yellow;
+	// 		a{
+	// 			width: 100%;
+	// 			height: 26px;
+	// 			padding-left: 20px;
+	// 			border-right: 1px solid $gray-200;
+	// 			border-left: 1px solid $gray-200;
+	// 			border-bottom: 1px solid $gray-200;
+	// 			line-height: 26px;
+	// 			display: inline-block;
+	// 		}
+	// 		.active{
+	// 			background-color: $yellow;
+	// 			&::after{
+	// 				content: "II";
+	// 				display: inline-block;
+	// 				font-weight: 700;
+	// 				padding-left: 50%;
+	// 			}
+	// 		}
+	// 	}
+	// }
+	// // estilos para pantallas superior a 992px
+	// @include media-breakpoint-up(lg){
+	// 	&__slider{
+	// 		.active{
+	// 			&::after{
+	// 				padding-left: 65%;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
