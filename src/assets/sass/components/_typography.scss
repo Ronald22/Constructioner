@@ -56,4 +56,14 @@
    a{
       color: $gray-800;
    }
+
+   @include media-breakpoint-up (md){
+      a{
+         color: $gray-600;
+         transition: color ease .2s;
+      }
+      a:hover {
+         color: $gray-900;
+      }
+   }
 }
