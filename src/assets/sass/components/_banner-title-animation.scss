@@ -1,0 +1,38 @@
+.banner__content{
+   h1{
+      animation: title 2s;
+   }
+   a{
+      animation: button 2s;
+   }
+
+   @keyframes title {
+      0%{
+         opacity: 0;
+         top: -30px;
+      }
+      25%{
+         opacity: 0;
+         top: -30px;
+      }
+      100%{
+         opacity: 1;
+         top: 0;
+      }
+   }
+
+   @keyframes button {
+      0%{
+         opacity: 0;
+         bottom: -30px;
+      }
+      25%{
+         opacity: 0;
+         bottom: -30px;
+      }
+      100%{
+         opacity: 1;
+         bottom: 0;
+      }
+   }
+}

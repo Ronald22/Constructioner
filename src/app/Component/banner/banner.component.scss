@@ -28,6 +28,7 @@
       height: 248px;	
       text-transform: uppercase;	
       h1{
+			position: relative;
          padding-top: 20px;
          padding-bottom: 20px;
          line-height: 30px;
@@ -44,71 +45,70 @@
          }
       }
       a{
+			position: relative;
          height: 40px;
          width: 126px;
       }
 
 	}
-	// // estilos para pantallas superior a 768px
-	// @include media-breakpoint-up(md){
-	// 	&__img{
-	// 		img{
-	// 			left: 50%;
-	// 		   transform: translate(-50%, 0%);
-	// 		   height: 748px;
-	// 		}
-	// 	}
-	// 	&__content{
-	// 		text-align: left;
-	// 		div{
-	// 			top: 0; bottom: 0; left: 50%; right: 50%;
-	// 			h1{
-	// 				line-height: 28px;
-	// 				span{
-	// 					margin-left: 3px;
-	// 					line-height: 42px;
-	// 				}
-	// 				&::after{
-	// 					margin-left: 2px;
-	// 				}
-	// 			}
-	// 			a{
-	// 				margin-left: 1px;
-	// 			}
-	// 		}
-	// 	}
-	// 	&__slider{
-	// 		width: 100%;
-	// 		border-top: 2px solid $yellow;
-	// 		a{
-	// 			width: 100%;
-	// 			height: 26px;
-	// 			padding-left: 20px;
-	// 			border-right: 1px solid $gray-200;
-	// 			border-left: 1px solid $gray-200;
-	// 			border-bottom: 1px solid $gray-200;
-	// 			line-height: 26px;
-	// 			display: inline-block;
-	// 		}
-	// 		.active{
-	// 			background-color: $yellow;
-	// 			&::after{
-	// 				content: "II";
-	// 				display: inline-block;
-	// 				font-weight: 700;
-	// 				padding-left: 50%;
-	// 			}
-	// 		}
-	// 	}
-	// }
-	// // estilos para pantallas superior a 992px
-	// @include media-breakpoint-up(lg){
-	// 	&__slider{
-	// 		.active{
-	// 			&::after{
-	// 				padding-left: 65%;
-	// 			}
-	// 		}
-	// 	}
-	// }
+	// estilos para pantallas superior a 768px
+	@include media-breakpoint-up(md){
+		&__img{
+			img{
+				left: 50%;
+			   transform: translate(-50%, 0%);
+			   height: 748px;
+			}
+		}
+		&__content{
+			text-align: left;
+			top: 0; bottom: 0; left: 50%; right: 50%;
+			h1{
+				line-height: 28px;
+				span{
+					margin-left: 3px;
+					line-height: 42px;
+				}
+				&::after{
+					margin-left: 2px;
+				}
+			}
+			a{
+				margin-left: 1px;
+			}
+		}
+		&__slider{
+			width: 100%;
+			border-top: 2px solid $yellow;
+			a{
+				width: 100%;
+				height: 26px;
+				padding-left: 20px;
+				border-right: 1px solid $gray-200;
+				border-left: 1px solid $gray-200;
+				border-bottom: 1px solid $gray-200;
+				line-height: 26px;
+				display: inline-block;
+			}
+			.active{
+				background-color: $yellow;
+				&::after{
+					content: "II";
+					display: inline-block;
+					font-weight: 700;
+					padding-left: 50%;
+				}
+			}
+		}
+	}
+	// estilos para pantallas superior a 992px
+	@include media-breakpoint-up(lg){
+		&__slider{
+			.active{
+				&::after{
+					padding-left: 65%;
+				}
+			}
+		}
+	}
 }
