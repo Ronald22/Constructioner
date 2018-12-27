@@ -1,0 +1,86 @@
+// animacion del menu de navegación
+
+@include media-breakpoint-up(md){
+   .menu__links--nav{
+      .menu-animation{
+         position: absolute;
+         bottom: -8px;
+         left: 15px;
+         margin: 0 5px;
+         height: 1px;
+         width: 37px;
+         background-color: $yellow;
+         transition: all .5s ease 0s;
+      }
+      .start-home, li:nth-child(1):hover~.menu-animation{
+         left: 15px;
+         width: 37px;
+      } 
+      .start-about, li:nth-child(2):hover~.menu-animation{
+         left: 62px;
+         width: 42px;
+      }
+      .start-services, li:nth-child(3):hover~.menu-animation{
+         left: 114px;
+         width: 54px;
+      }
+      .start-build, li:nth-child(4):hover~.menu-animation{
+         left: 178px;
+         width: 115px;
+      }
+      .start-portfolio, li:nth-child(5):hover~.menu-animation{
+         left: 303px;
+         width: 69px;
+      }
+      .start-blog, li:nth-child(6):hover~.menu-animation{
+         left: 382px;
+         width: 34px;
+      }
+      .start-contact, li:nth-child(7):hover~.menu-animation{
+         left: 426px;
+         width: 57px;
+      }
+   }
+}
+@include media-breakpoint-up(lg){
+   .menu__links--nav{
+      .menu-animation{
+         position: absolute;
+         bottom: -8px;
+         left: 15px;
+         margin: 0 9px;
+         height: 1px;
+         width: 37px;
+         background-color: $yellow;
+         transition: all .5s ease 0s;
+      }
+      .start-home, li:nth-child(1):hover~.menu-animation{
+         left: 15px;
+         width: 37px;
+      } 
+      .start-about, li:nth-child(2):hover~.menu-animation{
+         left: 69px;
+         width: 42px;
+      }
+      .start-services, li:nth-child(3):hover~.menu-animation{
+         left: 129px;
+         width: 54px;
+      }
+      .start-build, li:nth-child(4):hover~.menu-animation{
+         left: 201px;
+         width: 115px;
+      }
+      .start-portfolio, li:nth-child(5):hover~.menu-animation{
+         left: 334px;
+         width: 69px;
+      }
+      .start-blog, li:nth-child(6):hover~.menu-animation{
+         left: 421px;
+         width: 34px;
+      }
+      .start-contact, li:nth-child(7):hover~.menu-animation{
+         left: 473px;
+         width: 57px;
+      }
+   }
+}

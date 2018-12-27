@@ -3,7 +3,6 @@
 
 //Estilos de la barra de navegación principal
 .menu{
-
    // estilos del logo del sitio web
    &__logo{
       height: 40px;
@@ -14,7 +13,6 @@
    }
 
    // estilos del boton responsivo
-	// TODO: animar los botones para que el cambio no se note;
    &__button{
       background-color: transparent;        
       border-radius: 1px;
@@ -34,7 +32,8 @@
          right: 212px;
          top: 20px;
          color: rgba($white,.5);
-         font-size: .65rem;
+			font-size: .65rem;
+			animation: moverizquierda 1s;
 		}
 		&--open:hover{
          background-color: #FFCC33;
@@ -43,7 +42,12 @@
       }
       &--close:hover{
          color: #fff;
-      }
+		}
+		
+		@keyframes moverizquierda {
+			from { right: -188px; }
+			to { right: 212px; }
+		}
    }
 
    // estilos de la barra de navegacion y enlaces de accceso
@@ -58,7 +62,8 @@
 				}
 			}
 		}
-   }
+	}
+	// tamaño menor a 768px
    @include media-breakpoint-down(sm){
 		// tarea: arreglar el problema de que no muestra todo el menu en alturas pequeñas;
 		&__links{
@@ -92,16 +97,16 @@
 				div{
 					display: flex;
 					margin: 0 30px;
-		            padding-top: 30px;
-		            justify-content: space-between;
-			        a{
-			            display: inline-block;
-			            width: 95px;
-			        }
-			        a:first-child{
-			            margin-right: 5px;   
-			        }
-         		}
+					padding-top: 30px;
+					justify-content: space-between;
+					a{
+						display: inline-block;
+						width: 95px;
+					}
+					a:first-child{
+						margin-right: 5px;   
+					}
+				}
 			}
 		}
 		.show{
@@ -114,13 +119,13 @@
 		padding-bottom: 10px;
 		&__logo{
          height: 50px;
-         padding-bottom: 3.5px;
+         padding-bottom: 4px;
 		}
 		&__links{
 			&--nav{
 				li{
 					padding: 0 5px;
-				}
+				}				
 			}
 			&--access{
 				div{

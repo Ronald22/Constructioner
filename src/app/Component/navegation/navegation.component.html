@@ -17,7 +17,7 @@
 
          <!-- caso contrario se muestra el boton cerrar -->
          <ng-template #showIcon>
-            <button class="menu__button--close" [ngClass]="{ 'animate-button': show === false }" type="button">
+            <button class="menu__button--close" type="button">
                <fa-icon [icon]="['fas', 'times']" size="lg"></fa-icon>
             </button>
          </ng-template>      
@@ -27,13 +27,14 @@
       <div class="menu__links menu__links--nav col-auto" [ngClass]="{ 'show': show === false }">
          <!-- navegación  -->
             <ul class="f-menu d-md-flex">
-               <li><a href="">Home</a></li>
-               <li><a href="">About</a></li>
-               <li><a href="">Services</a></li>
-               <li><a href="">Build it yourself</a></li>
-               <li><a href="">Portfolio</a></li>
-               <li><a href="">Blog</a></li>
-               <li><a href="">Contact</a></li>
+               <li (click)="getNameLink('start-home')"><a id="menuHome" href=""  onclick = "event.preventDefault();">Home</a></li>
+               <li (click)="getNameLink('start-about')"><a id="menuAbout"  href=""  onclick ="event.preventDefault();">About</a></li>
+               <li (click)="getNameLink('start-services')"><a id="menuServices" href="" onclick ="event.preventDefault();">Services</a></li>
+               <li (click)="getNameLink('start-build')"><a id="menuBuild" href="" onclick ="event.preventDefault();">Build it yourself</a></li>
+               <li (click)="getNameLink('start-portfolio')"><a id="menuPortfolio" href="" onclick ="event.preventDefault();">Portfolio</a></li>
+               <li (click)="getNameLink('start-blog')"><a id="menuBlog" href="" onclick ="event.preventDefault();">Blog</a></li>
+               <li (click)="getNameLink('start-contact')"><a id="menuContact" href="" onclick ="event.preventDefault();">Contact</a></li>
+               <div class="menu-animation" [ngClass]="menuAnimationLink"></div>
             </ul>
       </div>
 

@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavegationComponent implements OnInit {
   // variable de estado para mostrar el menu responsivo
-  show:boolean = true;
+  show: boolean = true;
+  menuAnimationLink: string = "start-home"
     
   constructor() { }
 
@@ -18,5 +19,7 @@ export class NavegationComponent implements OnInit {
     let foo = this.show;
     this.show = foo === false ? true : false; 
   }
-
+  getNameLink(link:string){
+    this.menuAnimationLink = link;
+  }
 }

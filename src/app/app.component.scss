@@ -4,13 +4,14 @@
 .header{
    display: grid;
    grid-template-rows: 50px 518px;
+   grid-template-columns: 100%;
    
    &__navegation{
       grid-column: 1 / 2;
       grid-row: 1 / 2;
-      order: 10;
       background: rgba($white, .7);
       border-bottom: 1px solid $yellow;
+      z-index: 100;
    }
    
    &__banner{
